@@ -4,12 +4,48 @@
 }
 
 #header {
-  background-color: lightpink;
+  background-color: #ffb6c1;
   height: 30vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+}
+
+#newGameHead {
+  display: flex;
+  flex: 1 1 33vw;
+  padding-left: 40px;
+}
+
+#newGameBtn {
+  background-color: #00493e; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#newGameBtn:hover {
+  background-color: #032520;
+}
+
+#titleHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 33vw;
+}
+
+#triesHead {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 1 33vw;
+  padding-right: 40px;
 }
 
 #container {

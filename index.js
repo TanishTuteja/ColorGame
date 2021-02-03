@@ -11,6 +11,8 @@ let tries;
 
 let gameRunning;
 
+let headerBG = "#ffb6c1";
+
 function getRandomColor() {
   var letters = "0123456789ABCDEF";
   var color = "#";
@@ -31,7 +33,7 @@ function newGame() {
   x = Math.floor(Math.random() * numOfTiles);
   correctColor = tiles[x].style.background;
 
-  document.getElementById("header").style.backgroundColor = "#ffb6c1";
+  document.getElementById("header").style.backgroundColor = headerBG;
   document.getElementById("header-clue").innerHTML = correctColor;
 
   gameRunning = true;
@@ -53,6 +55,10 @@ for (let i = 0; i < numOfTiles; i++) {
       gameRunning = false;
     } else {
       tiles[i].style.background = "black";
+      document.getElementById("header").style.backgroundColor = "rgb(245, 14, 49)";
+      setTimeout(() => {
+        document.getElementById("header").style.backgroundColor = headerBG;
+      }, 200);
     }
   });
 }
